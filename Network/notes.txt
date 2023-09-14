@@ -1,0 +1,41 @@
+ 
+chapter#zero
+1:The (performance) is evaluate by two networking metric 
+2:The network (reliability) is measured by the frequency of failure,
+chapter#one
+1:Data communications are the exchange of data between two devices
+via some form of transmission medium such as a wire cable.
+2:
+chapter#2
+1:The physical layer is responsible for movements of
+individual bits from one hop (node) to the next.
+
+2:The data link layer is responsible for moving
+frames from one hop (node) to the next.
+
+3:The network layer is responsible for the
+delivery of individual packets from
+the source host to the destination host.
+
+4:The transport layer is responsible for the delivery
+of a message from one process to another.
+
+5:The session layer is responsible for dialog
+control and synchronization.
+
+6:The presentation layer is responsible for translation,
+compression, and encryption.
+
+7:The application layer is responsible for
+providing services to the user.
+
+8:The physical addresses will change from hop to hop,
+but the logical addresses usually remain the same.
+
+*Physical layer=>bits
+*Data Link => Fram
+*Network =>Packet
+*Transport => Segment(Data)
+
+
+
