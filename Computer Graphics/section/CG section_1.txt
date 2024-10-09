@@ -1,0 +1,36 @@
+#include<windows.h>
+#include <GL/glut.h>
+#include <math.h>
+
+
+void mydisplay_1();
+
+
+int main()
+{
+	glutInitWindowSize(500,500);
+	glutInitWindowPosition(100,100);
+	glutCreateWindow("project_1");
+	gluOrtho2D(0,500,0,500);
+	glutDisplayFunc(mydisplay_1);
+	glutMainLoop();
+}
+
+/*************************************************/
+/****************** NUM ( 1 ) ********************/
+/****************** نقطة *********************/
+/*************************************************/
+void mydisplay_1()
+{
+    glClearColor(1,1,1,0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1,0,0);
+    glPointSize(20);
+
+	glBegin(GL_POINTS);
+		glVertex2f(250,250);
+	glEnd();
+
+	glFlush();
+}
+

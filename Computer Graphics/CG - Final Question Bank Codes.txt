@@ -1,0 +1,94 @@
+#include<windows.h>
+#include <GL/glut.h>
+#include <math.h>
+
+void show_1() {
+	glClearColor(1,1,1,0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1,0,0);
+	glLineWidth(5);
+	glBegin(GL_LINE_STRIP);
+	int x=250 , y=250 , r=100;
+     float pi = 22.0/7.0;
+     for(float i=0 ; i <= 2*pi ; i+=0.001){
+     	glVertex2f(x+sin(i)*r, y+cos(i)*(r*2));
+	}
+	glEnd();
+	glFlush();
+}
+
+
+void show_2() {
+	glClearColor(1,1,1,0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0,1,0);
+	glLineWidth(10);
+	glBegin(GL_LINES);
+		glVertex2f(50,50);
+		glVertex2f(150,250);
+		glVertex2f(300,70);
+		glVertex2f(70,400);
+	glEnd();
+	glFlush();
+}
+
+
+void show_3() {
+	glClearColor(1,1,1,0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1,1,1);
+	glLineWidth(10);
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(50,50);
+		glVertex2f(150,250);
+		glVertex2f(300,70);
+		glVertex2f(70,400);
+	glEnd();
+	glFlush();
+}
+
+
+void show_4() {
+	glClearColor(1,1,1,0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0,0,1);
+	glLineWidth(10);
+	glBegin(GL_LINE_STRIP);
+		glVertex2f(50,50);
+		glVertex2f(250,50);
+		glVertex2f(150,150);
+		glVertex2f(450,400);
+	glEnd();
+	glFlush();
+}
+
+
+
+void show_5() {
+	glClearColor(0,1,0,0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(0,1,0);
+	glLineWidth(10);
+	glBegin(GL_LINE_LOOP);
+		glVertex2f(100,100);
+		glVertex2f(200,200);
+		glVertex2f(300,100);
+		glVertex2f(450,400);
+	glEnd();
+	glFlush();
+}
+
+
+int main()
+{
+    glutInitWindowSize(500,500);
+    glutInitWindowPosition(100,100);
+    glutCreateWindow("CG");
+    gluOrtho2D(0,500,0,500);
+    glutDisplayFunc(show_1);   //Q80
+    //glutDisplayFunc(show_2); //Q81
+    //glutDisplayFunc(show_3); //Q88
+    //glutDisplayFunc(show_4); //Q89
+    //glutDisplayFunc(show_5); //Q90
+    glutMainLoop();
+}
